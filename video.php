@@ -23,10 +23,10 @@ class YellowVideo
 			list($videourl, $allow_dl) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($allow_dl)) $allow_dl = 0;
 			$output = "<video controls width=\"100%\" height=\"auto\"><source src=\"".htmlspecialchars($videourl)."\">HTML5 video not supported. ";
+			$output .="</video>\r\n";
 			if ($allow_dl == 1) {
 				$output .="<a href=\"".htmlspecialchars($videourl)."\">Download</a>";
 			}
-			$output .="</video>\r\n";
 		}
 		return $output;
 	}
