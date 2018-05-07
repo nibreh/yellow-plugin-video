@@ -5,7 +5,7 @@
 // HTML5 video player plugin
 class YellowVideo
 {
-	const Version = "0.6.5";
+	const Version = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -20,13 +20,9 @@ class YellowVideo
 		$output = NULL;
 		if($name=="video" && $shortcut)
 		{
-			list($videourl, $allow_dl) = $this->yellow->toolbox->getTextArgs($text);
-			if(empty($allow_dl)) $allow_dl = 0;
-			$output = "<video controls width=\"100%\" height=\"auto\"><source src=\"".htmlspecialchars($videourl)."\">HTML5 video not supported. ";
+			list($videourl, $poster) = $this->yellow->toolbox->getTextArgs($text);
+			$output = "<video controls width=\"100%\" height=\"auto\" poster=\"".htmlspecialchars($poster)."\" src=\"".htmlspecialchars($videourl)."\">";
 			$output .="</video>\r\n";
-			if ($allow_dl == 1) {
-				$output .="<a href=\"".htmlspecialchars($videourl)."\">Download</a>";
-			}
 		}
 		return $output;
 	}
