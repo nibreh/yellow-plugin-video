@@ -1,4 +1,4 @@
-# HTML5 video plugin 0.6.5
+# HTML5 video plugin 0.6.6
 A HTML5 video player for Yellow. This plugin embeds a basic video player using the HTML5 `<video>` tag, which should be supported by most modern browsers. This is the standard way to embed a video in a web page. [More on Wikipedia](https://en.wikipedia.org/wiki/HTML5_video).
 
 Based on [HTML5 audio plugin](https://github.com/schulle4u/yellow-plugin-audio) by schulle4u.
@@ -16,7 +16,7 @@ Create a `[video]` shortcut.
 The following arguments are available:
 
 `videourl` = URL to a supported media file (OGV, MP4, WEBM etc)  
-`allow_dl` = 1 or 0. Enable file download as fallback, useful for browsers which don't support the `<video>` tag. Off by default.
+`poster` = optional: specifies the URL of the image file
 
 By default *width* is `100%` and *height* is `auto`.
 
@@ -25,5 +25,5 @@ By default *width* is `100%` and *height* is `auto`.
 Embedding an video:
 
     [video /media/downloads/demo.mp4] 
-    [video /media/demo.webm 1] 
+    [video /media/demo.webm /media/images/preview.jpg] 
     [video https://ia800201.us.archive.org/12/items/BigBuckBunny_328/BigBuckBunny.ogv]
