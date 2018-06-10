@@ -1,4 +1,4 @@
-# HTML5 video plugin 0.6.6
+# HTML5 video plugin 0.6.7
 A HTML5 video player for Yellow. This plugin embeds a basic video player using the HTML5 `<video>` tag, which should be supported by most modern browsers. This is the standard way to embed a video in a web page. [More on Wikipedia](https://en.wikipedia.org/wiki/HTML5_video).
 
 Based on [HTML5 audio plugin](https://github.com/schulle4u/yellow-plugin-audio) by schulle4u.
