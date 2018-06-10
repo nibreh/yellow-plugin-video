@@ -5,7 +5,7 @@
 // HTML5 video player plugin
 class YellowVideo
 {
-	const Version = "0.6.6";
+	const Version = "0.6.7";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -21,8 +21,14 @@ class YellowVideo
 		if($name=="video" && $shortcut)
 		{
 			list($videourl, $poster) = $this->yellow->toolbox->getTextArgs($text);
-			$output = "<video controls width=\"100%\" height=\"auto\" poster=\"".htmlspecialchars($poster)."\" src=\"".htmlspecialchars($videourl)."\">";
+			if(empty($poster)) {
+			$output = "<video controls style=\"width:100%; height:auto;\" src=\"".htmlspecialchars($videourl)."\">";
 			$output .="</video>\r\n";
+			}
+			else {
+			$output = "<video controls style=\"width:100%; height:auto;\" poster=\"".htmlspecialchars($poster)."\" src=\"".htmlspecialchars($videourl)."\">";
+			$output .="</video>\r\n";
+			}
 		}
 		return $output;
 	}
