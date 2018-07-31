@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
+// Video plugin, https://github.com/nibreh/yellow-plugin-video
+// Copyright (c) 2013-2015 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// HTML5 video player plugin
 class YellowVideo
 {
-	const Version = "0.6.7";
+	const VERSION = "0.6.7";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -34,5 +34,5 @@ class YellowVideo
 	}
 }
 
-$yellow->plugins->register("video", "YellowVideo", YellowVideo::Version);
+$yellow->plugins->register("video", "YellowVideo", YellowVideo::VERSION);
 ?>
